@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    z-index: 22360;
+    width: 100%;
+    height: 100px;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+
+}
+
+.header ul {
+    margin: auto 0 auto 50px;
+    display: flex;
+
+}
+
+.header ul a li {
+    margin: 0 10px;
+    list-style: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+.header ul li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#on {
+    color: white;
+    font-weight: bold;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: url('../../imageFiles/ReapersLogo.PNG');
+    background-position: center;
+    background-size: cover;
+}
+
+/****** MOBILE HEADER (HIDDEN ON DESKTOP) ******/
+.mobileHeader {
+    display: none;
+    width: 100%;
+    height: 80px;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 22360;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Mobile Logo */
+.mobileLogo {
+    position: absolute;
+    right: 40px;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background: url('../../imageFiles/ReapersLogo.PNG');
+    background-position: center;
+    background-size: cover;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: .3s;
+}
+
+/* Mobile Menu Dropdown */
+.mobileMenu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: black;
+    padding: 20px 0;
+    display: none;
+    z-index: 29999;
+}
+
+.mobileMenu ul {
+    list-style: none;
+    text-align: center;
+}
+
+.mobileMenu ul li {
+    margin: 20px 0;
+}
+
+.mobileMenu ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+/****** SHOW MOBILE MENU WHEN ACTIVE ******/
+.mobileMenu.active {
+    display: block;
+}
+
+/****** HIDE DESKTOP HEADER ON MOBILE ******/
+@media (max-width: 700px) {
+    .header {
+        display: none;
+    }
+    .mobileHeader {
+        display: block;
+    }
+}
