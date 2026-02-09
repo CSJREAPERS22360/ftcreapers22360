@@ -61,6 +61,10 @@ a {
     background-size: cover;
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 /* ===========================
    MOBILE HEADER (HIDDEN BY DEFAULT)
    =========================== */
@@ -89,6 +93,10 @@ a {
     background: url('../../imageFiles/ReapersLogo.PNG');
     background-position: center;
     background-size: cover;
+}
+
+.mobileLogo:hover {
+    cursor: pointer;
 }
 
 /* Hamburger Icon */
