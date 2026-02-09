@@ -1,3 +1,6 @@
+/* GLOBAL RESET */
+body { padding-top: 80px; }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,6 +12,9 @@ a {
     text-decoration: none;
 }
 
+/* ===========================
+   DESKTOP HEADER
+   =========================== */
 .header {
     z-index: 22360;
     width: 100%;
@@ -18,13 +24,11 @@ a {
     top: 0;
     left: 0;
     display: flex;
-
 }
 
 .header ul {
     margin: auto 0 auto 50px;
     display: flex;
-
 }
 
 .header ul a li {
@@ -57,7 +61,9 @@ a {
     background-size: cover;
 }
 
-/****** MOBILE HEADER (HIDDEN ON DESKTOP) ******/
+/* ===========================
+   MOBILE HEADER (HIDDEN BY DEFAULT)
+   =========================== */
 .mobileHeader {
     display: none;
     width: 100%;
@@ -105,10 +111,12 @@ a {
     transition: .3s;
 }
 
-/* Mobile Menu Dropdown */
+/* ===========================
+   MOBILE DROPDOWN MENU
+   =========================== */
 .mobileMenu {
     position: fixed;
-    top: 80px;
+    top: 80px; /* sits under mobile header */
     left: 0;
     width: 100%;
     background: black;
@@ -133,17 +141,27 @@ a {
     letter-spacing: 2px;
 }
 
-/****** SHOW MOBILE MENU WHEN ACTIVE ******/
+/* Show dropdown when active */
 .mobileMenu.active {
     display: block;
 }
 
-/****** HIDE DESKTOP HEADER ON MOBILE ******/
-@media (max-width: 700px) {
+/* ===========================
+   MOBILE RESPONSIVE FIXES
+   =========================== */
+@media screen and (max-width: 700px) {
     .header {
         display: none;
+        height: 0;
+        position: static;
     }
+
     .mobileHeader {
-        display: block;
+        display: flex;
+    }
+
+    body {
+        padding-top: 80px; /* THIS is the real fix */
     }
 }
+

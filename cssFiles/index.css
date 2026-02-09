@@ -1,14 +1,18 @@
 /****** HERO BACKGROUND VIDEO ******/
+/* HERO SECTION */
 .hero {
     width: 100%;
     height: 100vh;
     background: yellow;
+    position: relative; /* IMPORTANT */
 }
 
 .hero h1 {
-    position: absolute; bottom: 0; left: 0; right: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
-    margin: auto;
 
     font-size: 150px;
     letter-spacing: 20px;
@@ -94,6 +98,7 @@
 /****** OUR MISSION ******/
 .ourMission {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     width: 100%;
     height: 90vh;
@@ -155,7 +160,9 @@
 /****** OUR ROBOT ******/
 .ourRobot {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 95vh;
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(77, 4, 4, 1) 100%);
@@ -241,19 +248,19 @@
 .news {
     margin-top: 50vh;
     width: 100%;
-    height: 100vh;
+    height: 700px;
     background: black;
 }
 
 /***** SCREEN FRIENDLY *****/
-@media (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
     .ourMissionLeft {font-size: 22px; width: 40%; margin-right: 40px;}
     .ourMissionRightBox1, .ourMissionRightBox2, .ourMissionRightBox3 {width: 500px;height: 300px;}
     .ourRobotLeftBox1, .ourRobotLeftBox2, .ourRobotLeftBox3 {width: 300px;height: 500px;}
     .whereWeOnTitle2 h1 {font-size: 34px;}
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     .hero h1 {font-size: 120px}
     .ourMissionLeft {font-size: 20px; width: 40%; margin-right: 40px;}
     .ourMissionRightBox1, .ourMissionRightBox2, .ourMissionRightBox3 {width: 400px;height: 300px;}
@@ -264,16 +271,44 @@
     .whereWeOnTitle2 h1 {font-size: 30px;}
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .hero h1 {font-size: 100px}
-    .ourMission {height: 70vh;}
+    .ourMission {height: 500px;}
     .ourMissionLeft {font-size: 15px; width: 40%; margin-right: 40px;}
     .ourMissionRightBox1, .ourMissionRightBox2, .ourMissionRightBox3 {width: 350px;height: 250px;}
-    .ourRobot {height: 70vh;}
+    .ourRobot {height: 500px;}
     .ourRobotRight {font-size: 15px;}
     .ourRobotLeftBox1, .ourRobotLeftBox2, .ourRobotLeftBox3 {width: 250px;height: 350px;}
     .ourRobotRightTitle {margin-top: -85px; margin-bottom: 50px;}
     .whereWeOnTitle {height: 400px; width: 56%;}
     .whereWeOnTitle2 {height: 370px; width: 55%;}
     .whereWeOnTitle2 h1 {font-size: 25px;}
+}
+
+@media screen and (max-width: 700px) {
+    .ourMission, .ourRobot {flex-direction: column; align-items: center; height: 700px; padding-top: 100px;} .ourMissionRight {width: 100%; position: absolute; margin-top: -350px; padding: 0;} .ourMissionLeft {width: 90%; margin-top: 280px; align-items: center; margin-right: 0; padding: 0;} .ourMissionLeftTx {font-size: 20px; text-align: center}
+    .ourMissionRightBox1, .ourMissionRightBox2, .ourMissionRightBox3 {width: 70%; height: 300px;}
+
+    .ourRobotLeft {margin-left: 40px;} .ourRobotRight {width: 100%; margin-top: 200px; display: flex; align-items: center; text-align: center; padding: 0;}
+    .ourRobotLeftBox1, .ourRobotLeftBox2, .ourRobotLeftBox3 {width: 70%; height: 300px;} .ourRobotLeftBox2 {margin-left: 20px; margin-top: 15px;} .ourRobotLeftBox3 {margin-left: 40px; margin-top: 30px;}
+
+    .whereWeOnTitle {width: 98%;} .whereWeOnTitle2 {width: 97%;}
+}
+
+@media screen and (max-width: 500px) {
+    .ourMissionRight {width: 98%; margin-top: -500px; margin-left: -50px;} .ourMissionLeft {margin-top: 150px;} .ourRobotRight {margin-top: 50px;}
+    .ourMissionRightBox1, .ourMissionRightBox2, .ourMissionRightBox3, .ourRobotLeftBox1, .ourRobotLeftBox2, .ourRobotLeftBox3 {height: 250px;}
+
+    .ourMissionRight {padding: 0;} .ourMissionLeft {padding: 0;}
+    .ourRobotRight {margin-left: 0; padding-right: 0;}
+}
+
+@media screen and (max-width: 400px) {
+    .whoWeAre h2 {font-size: 20px;}
+    .ourMission {height: 620px;} .ourRobot {height: 600px;}
+    .ourMissionRightBox1, .ourMissionRightBox2, .ourRobotLeftBox1, .ourRobotLeftBox2 {display: none;}
+    .ourMissionRightBox3, .ourRobotLeftBox3 {width: 95%; height: 200px;} .ourMissionRight {margin-top: -500px;} .ourMissionLeft {margin-top: 100px;}
+    .ourRobotLeftBox3 {margin-left: 20px; margin-top: -35px;} .ourRobotRight {margin-top: -50px;}
+
+     .whereWeOnTitle {height: 235px;} .whereWeOnTitle2 {height: 220px;} .whereWeOnTitle2 h1 {font-size: 17px; margin-bottom: -15px;}
 }
