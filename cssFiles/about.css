@@ -4,23 +4,14 @@
     background: yellow;
 }
 
-.hero h1 {
-    position: absolute; top: 250px; left: 0; right: 0;
-    text-align: center;
-    margin: auto;
-
-    font-size: 115px;
-    letter-spacing: 10px;
-    font-family: "Trend Slab W00 Five";
-}
-
 .aboutReapers {
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px;
+    padding: 20px;
     width: 100%;
-    height: 40vh;
+    height: 400px;
     background: black;
     font-size: 18px;
     text-transform: uppercase;
@@ -33,67 +24,83 @@
 .roles {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-content: center;
     width: 100%;
     height: auto;
     background: black;
     padding-bottom: 200px;
 }
 
+/*IMG*/
+.captainOneImg, .captainTwoImg,.engineerOneImg, .engineerTwoImg, .engineerThreeImg, .programmerOneImg, .programmerTwoImg, .programmerThreeImg, .outreachOneImg, .outreachTwoImg, .outreachThreeImg, .mediaOneImg, .mediaTwoImg, .mediaThreeImg, .portOneImg, .portTwoImg, .portThreeImg
+{width: 100%; height: 100%; background-position: center; background-size: cover;}
+
 /*CAPTAINS*/
-.captains {margin-top: 100px;width: 720px;height: auto;}
-.rolesTitle {margin-left: 50px; text-transform: uppercase;}
-.rolesTitle p {color: rgba(255, 255, 255, 0.82);}
-.rolesTitle h1 {color: white; letter-spacing: 2px; margin-top: -5px;}
+.captains, .engineers, .programmers, .socialMedia, .portfolios {width: 100%;}
+.rolesTitle, .rolesTx, .rolesTx1 { color: rgba(255, 255, 255, 0.82); text-align: center} .rolesTitle {text-align: start} .rolesTitle h1 {margin-top: -5px; font-size: 40px;}
+.rolesTx {margin-top: 10px;} .rolesTx1 {font-size: 14px;} .rolesTx2 {color: white; font-size: 20px; margin-top: -5px;}
 
-.captainOneImg, .captainTwoImg {
-    margin-top: 10px;
-    width: 70%;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-}
-
-.captainTwoImg {margin-left: 215px; margin-top: 25px;}
-.rolesTx {width: 100%; height: 100%; text-align: center;}
-.rolesTx1 {text-transform: uppercase; color: rgba(255, 255, 255, 0.82); font-size: 14px; font-weight: 400}
-.rolesTx2 {text-transform: uppercase; color: white; font-size: 20px; font-weight: bold; margin-top: -5px;}
-#captain1 {margin-left: -150px; margin-top: 5px;}
-#captain2 {margin-left: 200px; margin-top: 5px;}
+.captains {display: flex; flex-direction: column; align-items: center;}
+.captainOne, .captainTwo {margin-top: 20px; width: 700px; height: 400px;} .captainTwo {margin-top: 100px; margin-right: -10%;} .captainOne {margin-left: -10%;}
+#captain1 {margin-left: -25%;} #captain2 {margin-left: 40%;}
+#rolesTitleCaptains {margin-left: -47%;}
 
 /*ENGINEERS*/
-.engineers {width: 720px; display: flex; justify-content: space-evenly; margin-top: 230px;}
-.engineerOne, .engineerTwo, .engineerThree {width: 100%; height: 500px; margin: 20px;}
-.engineerOneImg, .engineerTwoImg, .engineerThreeImg {width: 100%; height: 100%; background-size: cover; background-position: center;}
-.engineerTwo {margin-top: 120px;}
-.engineerThree {margin-top: 320px;}
-#engineer1, #engineer2, #engineer3 {margin-top: 5px;}
-#rolesTitleEngineers {position: absolute; margin-top: 15px; margin-right: -250px;}
+#rolesTitleEngineers {position: absolute; left: 48%; }
+.engineers {display: flex; justify-content: center; margin-top: 200px;}
+.engineerOne, .engineerTwo, .engineerThree {width: 200px; height: 600px; margin: 0 15px;}
+.engineerTwo {margin-top: 120px;} .engineerThree {margin-top: 240px;}
 
-/*OUTREACHES*/
-#rolesTitleOutreach {margin-left: 245px;}
-.outreach {width: 720px; height: 350px; margin-top: 230px;}
-.outreaches {width: 100%; height: 100%; display: flex; margin-top: 20px;}
-.outreach1, .outreach2, .outreach3 {width: 300px; height: 60%; margin: 10px;}
-.outreachOneImg, .outreachTwoImg, .outreachThreeImg {width: 100%; height: 100%; background-size: cover; background-position: center;}
-.rolesTx1 {margin-top: 5px;}
+/*PROGRAMMERS*/
+.programmers {display: flex; flex-direction: column; align-items: center; margin-top: 150px;}
+.programmerOne, .programmerTwo, .programmerThree {width: 700px; height: 400px; margin-top: 20px;}
+.programmerTwo, .programmerThree {margin-top: 80px;}
+.programmerOne {margin-left: -10%;} .programmerThree {margin-right: -20%;}
+
+/*OUTREACH*/
+.outreach {display: flex; flex-direction: column; align-items: center; margin-top: 150px;}
+.outreaches {display: flex; justify-content: center; margin-top: 20px;}
+.outreach1, .outreach2, .outreach3 {text-align: center; width: 200px; height: 250px; margin: 0 20px;}
 
 /*SOCIAL MEDIA*/
-.socialMedia {margin-top: 230px; text-align: center}
-.media1, .media2, .media3 {width: 200px; height: 250px; margin-top: 50px;}
-.media1 {margin-left: 300px;}
-.media2 {margin-top: -100px; margin-left: 50px;}
-.media3 {margin-left: 320px; margin-top: -50px;}
-.mediaOneImg, .mediaTwoImg, .mediaThreeImg {width: 100%; height: 100%; background-size: cover; background-position: center;}
+.socialMedia {display: flex; flex-direction: column; align-items: center; margin-top: 150px;}
+.media1, .media2, .media3 {width: 200px; height: 300px; text-align: center; margin-top: 30px;}
+.media1, .media3 {margin-right: -240px;} .media2 { margin-left: -230px; margin-top: -100px;} .media3 {margin-top: -100px;}
 
-/*PORTFOLIOS*/
-.portfolios {margin-top: 230px; text-align: center}
-.port1, .port2, .port3 {width: 200px; height: 250px; background: yellow; margin-top: 50px;}
-.port2 {margin-left: 270px; margin-top: -150px;}
-.port3 {margin-top: -20px;}
-.portOneImg, .portTwoImg, .portThreeImg {width: 100%; height: 100%; background-size: cover; background-position: center;}
+/*PORTFOLIO*/
+.portfolios {display: flex; flex-direction: column; align-items: center; margin-top: 150px;}
+.port1, .port2, .port3 {width: 200px; height: 300px; text-align: center; margin-top: 30px;}
+.port1, .port3 {margin-left: -230px;} .port2 {margin-right: -240px; margin-top: -100px;} .port3 {margin-top: -100px;}
 
-/***** SCREEN FRIENDLY *****/
-@media (max-width: 1300px) {.hero h1 {font-size: 120px;}}
-@media (max-width: 1000px) {.hero h1 {font-size: 95px;} .aboutReapers {font-size: 14px;}}
-@media (max-width: 800px) {.hero h1 {font-size: 75px; top: 300px} }
+
+@media screen and (max-width: 900px) {
+    #rolesTitleCaptains {margin-right: -1%;} .captainOne, .captainTwo {width: 400px; height: 250px;} .captainTwo {margin-top: 80px;}
+    #rolesTitleEngineers {left: 40%;} .engineerOne, .engineerTwo, .engineerThree {width: 150px; height: 400px; margin: 0 15px;} .engineerTwo {margin-top: 120px;} .engineerThree {margin-top: 240px;}
+    .programmerOne, .programmerTwo, .programmerThree {width: 400px; height: 250px;}
+    .outreach1, .outreach2, .outreach3 {text-align: center; width: 150px; height: 200px;}
+    .media1, .media2, .media3 {width: 150px; height: 250px;} .media1, .media3 {margin-right: -180px;} .media2 { margin-left: -180px;} .media3 {margin-top: -70px;}
+    .port1, .port2, .port3 {width: 150px; height: 250px;} .port1, .port3 {margin-left: -180px;} .port2 {margin-right: -180px;} .port3 {margin-top: -70px;}
+
+}
+
+@media screen and (max-width: 600px) {
+    .aboutReapers {font-size: 14px;}
+    .engineers, .programmers, .socialMedia, .portfolios {margin-top: 120px;}
+    .rolesTx, #captain1, #captain2 {margin: 0;} #rolesTitleEngineers {position: absolute; left: 18%;}
+    #rolesTitleCaptains {margin: 0;} .captainOne, .captainTwo {width: 80%; margin: 0;} .captainTwo {margin-top: 80px;}
+    .engineerTwo {margin-top: 0;} .engineerThree {margin-top: 0;} .engineerOne, .engineerTwo, .engineerThree {width: 150px; height: 250px; margin-top: 100px; margin-left: 10px; margin-right: 10px;}
+    .programmerOne, .programmerTwo, .programmerThree {width: 80%; margin: 0; margin-top: 10px;} .programmerTwo, .programmerThree {margin-top: 80px;}
+    .outreach1, .outreach2, .outreach3 {margin: 0 5px; width: 150px; height: 150px;}
+}
+
+@media screen and (max-width: 500px) {
+    .rolesTitle h1 {font-size: 25px;} #rolesTitleEngineers {left: auto; right: auto;}
+    .rolesTx1 {margin-top: 10px; font-size: 10px;} .rolesTx2 {font-size: 15px;}
+    .captainOne, .captainTwo, .programmerOne, .programmerTwo, .programmerThree {height: 200px;}
+    .outreach1, .outreach2, .outreach3 {margin: 0 8px; width: 100px; height: 150px;}
+    .engineerOne, .engineerTwo, .engineerThree {width: 100px; height: 150px; margin-left: 10px; margin-right: 10px;}
+}
+
+@media screen and (max-width: 400px) {
+    .aboutReapers {font-size: 13px;}
+}
