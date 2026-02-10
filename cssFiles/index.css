@@ -144,7 +144,7 @@
 .ourMissionRightBox1 {background: #5e0000;}
 .ourMissionRightBox2 {background: #961205; margin-top: 25px; margin-left: 25px;}
 .ourMissionRightBox3 {
-    background-image: url('../imageFiles/TeamPhoto.jpeg');
+    background-image: url('../imageFiles/INTO_THE_DEEP/INTO_THE_DEEP_3.PNG');
     background-position: center;
     background-size: cover;
     margin-top: 50px; margin-left: 50px;
@@ -179,7 +179,7 @@
 .ourRobotLeftBox1 {background: #5e0000;}
 .ourRobotLeftBox2 {background: #961205; margin-top: 25px; margin-left: 45px;}
 .ourRobotLeftBox3 {
-    background-image: url('../imageFiles/TeamPhoto.jpeg');
+    background-image: url('../imageFiles/DECODE/DECODE_8.JPG');
     background-position: center;
     background-size: cover;
     margin-top: 50px; margin-left: 85px;
@@ -211,7 +211,7 @@
     position: absolute;
     width: 100%;
     height: 50vh;
-    background-image: url('../imageFiles/TeamPhoto.jpeg');
+    background-image: url('../imageFiles/DECODE/DECODE_2.JPG');
     background-position: center;
     background-size: cover;
 
