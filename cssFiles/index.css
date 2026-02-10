@@ -2,22 +2,22 @@
 /* HERO SECTION */
 .hero {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background: yellow;
     position: relative; /* IMPORTANT */
 }
 
-/*.hero h1 {*/
-/*    position: absolute;*/
-/*    bottom: 0;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    text-align: center;*/
+.hero h1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
 
-/*    font-size: 150px;*/
-/*    letter-spacing: 20px;*/
-/*    font-family: "Trend Slab W00 Five";*/
-/*}*/
+    font-size: clamp(24px, 12vw, 150px);
+    letter-spacing: 10px;
+    font-family: "Trend Slab W00 Five";
+}
 
 /****** WHO WE ARE ******/
 .whoWeAre {
@@ -254,7 +254,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .hero h1 {font-size: 120px}
     .ourMissionLeft {font-size: 20px; width: 40%; margin-right: 40px;}
     .ourMissionRightBox1, .ourMissionRightBox2, .ourMissionRightBox3 {width: 400px;height: 300px;}
     .ourRobotLeftBox1, .ourRobotLeftBox2, .ourRobotLeftBox3 {width: 300px;height: 400px;}
@@ -265,7 +264,6 @@
 }
 
 @media screen and (max-width: 800px) {
-    .hero h1 {font-size: 100px}
     .ourMission {height: 500px;}
     .ourMissionLeft {font-size: 15px; width: 40%; margin-right: 40px;}
     .ourMissionRightBox1, .ourMissionRightBox2, .ourMissionRightBox3 {width: 350px;height: 250px;}
