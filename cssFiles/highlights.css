@@ -5,107 +5,83 @@ html {background: black;}
     background: yellow;
 }
 
-.hero h1 {
-    position: absolute; top: 250px; left: 0; right: 0;
-    text-align: center;
-    margin: auto;
+.awards {width: 100%; height: auto; background: black; margin-top: 50px; display: flex; flex-direction: column; align-items: center; padding-bottom: 200px;}
 
-    font-size: 115px;
-    letter-spacing: 10px;
-    font-family: "Trend Slab W00 Five";
+.champs, .inspire, .design, .mentorship, .workshops {width: 90%; height: 400px; margin-top: 50px;}
+.inspire, .design, .mentorship, .workshops {margin-top: 150px;}
+.awardsContent, .designAwardContent {display: flex; width: 100%; height: 100%; align-items: center; justify-content: space-between;} .awardsContentTx {color: rgba(255, 255, 255, 0.82);}
+.designAwardImg {width: 100%; height: 100%; background-position: center; background-size: cover;} .awardsContentImg {width: 40%; height: 100%; background-position: center; background-size: cover;} .awardsContentTx {width: 55%; font-size: 25px;}
+
+.title1 {color: rgba(255, 255, 255, 0.82);}  .title2{color: white; font-size: 25px; margin-top: -5px;}
+#inspireAwardTitle, #workshopsTitle {text-align: end}
+
+@media screen and (max-width: 1000px) {
+    .awardsContentTx {font-size: 20px;}
 }
 
-.line {background: black; width: 100%; height: 50px; display: flex; justify-content: center; align-items: center; padding-top: 100px;}
-.lineee {width: 95%; height: 5px; background: white; border-radius: 100px;}
-
-.awards {display: flex; flex-direction: column; align-items: center; width: 100%; height: auto;  background: black;}
-
-.champs, .inspire, .mentorship, .workshops {margin-top: 100px; width: 70%; height: 500px;}
-
-.title1 {text-transform: uppercase; color: rgba(255, 255, 255, 0.82); font-size: 20px; font-weight: 400}
-.title2 {width: auto; text-transform: uppercase; color: white; font-size: 30px; font-weight: bold; margin-top: -5px; letter-spacing: 2px; align-items: center}
-
-.awardsContent {width: 100%; height: 100%; display: flex; justify-content: space-between;}
-.awardsContentImg {margin-top: 25px; width: 40%; height: 400px; background-position: center; background-size: cover;}
-.awardsContentTx {margin-top: 25px; width: 50%; height: 100%; color: rgba(255, 255, 255, 0.82); text-transform: uppercase;}
-
-#inspireAwardTitle, #workshopsTitle {margin-left: 60%;}
-
-#designAwardTitle {width: 100%; margin-top: 150px; margin-bottom: 25px; text-align: center;}
-.designAwardContent {width: 1200px; height: 500px;}
-.designAwardImg {width: 100%; height: 100%; background-position: center; background-size: cover;}
-
-.outreachActivities {
-    background: black;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    display: flex;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    justify-content: center;
+@media screen and (max-width: 700px) {
+    .champs, .inspire, .design, .mentorship, .workshops {height: 250px; margin-top: 0;}
+    .inspire, .design, .mentorship, .workshops {margin-top: 100px;}
+    .awardsContentTx {font-size: 15px;}
 }
 
-.outreachActivitiesWords {
-    display: flex;
-    flex-direction: column;
-    margin: 0 100px;
-    justify-content: center;
-    width: 25%;
-    height: 100%;
+@media screen and (max-width: 600px) {
+    .champs, .inspire, .design, .mentorship, .workshops {width: 95%;}
+    .inspire, .design, .workshops {margin-top: 300px;}
+    .awardsContent {flex-direction: column; height: auto;}
+    .awardsContentImg {width: 100%; height: 250px;}
+    .awardsContentTx {width: 100%; text-align: center; margin-top: 10px;}
+
+    #inspireImg, #workshopImg {position: absolute;} #inspireContent, #workshopContent {margin-top: 265px;}
+    #workshopsTitle {text-align: start;} #mentorshipTitle {text-align: end;}
 }
 
-.outreachActivitiesWords h1 {color: white; font-size: 70px; line-height: 60px;}
-.outreachActivitiesWords p {font-size: 25px; color: rgba(255, 255, 255, 0.82); margin-top: 50px;}
-
-.outreachActivitiesBoxes {
-    width: 40%;
-    height: 100%;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 220px));
-    gap: 10px;
+@media screen and (max-width: 400px) {
+    .inspire, .design, .workshops {margin-top: 350px;}
 }
 
-.outreachActivitiesBoxesInfo {
-    text-align: center;
-    width: 100%;
-    height: 250px;
-    border-radius: 15px;
+.outreachActivities {display: flex; width: 100%; height: auto; justify-content: space-evenly; align-items: center; padding: 50px 0;}
+.outreachActivitiesWords {width: 40%; color: white; font-size: 30px;} .outreachActivitiesWords p {font-size: 20px; color: rgba(255, 255, 255, 0.82); margin-top: 20px;} .outreachActivitiesWords h1 {line-height: 55px}
+.outreachActivitiesBoxes {width: 50%; display: grid; grid-template-columns: 50% 50%; grid-gap: 10px;}
+.outreachActivitiesBoxesInfo {display: flex; flex-direction: column; width: 100%; height: 250px; padding: 20px; border-radius: 10px; justify-content: space-evenly;}
+.outreachActivitiesBoxesInfo h1 {font-size: 20px; color: white;} .outreachActivitiesBoxesInfo p {color: rgba(255, 255, 255, 0.82);}
+
+@media screen and (max-width: 1000px) {
+    .outreachActivities {flex-direction: column;} .outreachActivitiesWords {width: 90%; text-align: center;}
+    .outreachActivitiesBoxes {margin-top: 30px; width: 100%; grid-template-columns: repeat(auto-fit, minmax(20%, 23%)); justify-content: center;}
+    .outreachActivitiesBoxesInfo h1 {font-size: 18px;} .outreachActivitiesBoxesInfo p {font-size: 14px;}
 }
 
-.outreachActivitiesBoxesInfo h1 {
-    margin-top: 10px;
-    padding: 15px;
-    font-size: 24px;
-    line-height: 20px;
-    color: white;
+@media screen and (max-width: 900px) {
+    .outreachActivitiesBoxesInfo {height: 200px;}
+    .outreachActivitiesBoxesInfo h1 {font-size: 15px;} .outreachActivitiesBoxesInfo p {font-size: 12px;}
 }
 
-.outreachActivitiesBoxesInfo p {
-    padding: 0 25px;
-    font-size: 14px;
-    margin-top: 15px;
-    line-height: 18px;
-    color: white;
+@media screen and (max-width: 800px) {
+    .outreachActivitiesBoxes {grid-template-columns: 44% 44%;}
+    .outreachActivitiesBoxesInfo h1 {font-size: 18px;} .outreachActivitiesBoxesInfo p {font-size: 14px;}
 }
 
-.outreachSignUps {width: 100%; height: 400px; margin: 120px 0;}
-.outreachSignUpsImg {width: 100%; height: 100%; background-position: center; background-size: cover;}
-.signUpBtn {width: 500px; height: 60px; border: 2px solid white; position: absolute; right: 100px; margin-top: 300px; z-index: 999; background: none; color: white; font-size: 22px;}
-.signUpBtn:hover {scale: 0.98; cursor: pointer; background: white; color: #5e0000; font-size: 20px; border-radius: 10px;}
+@media screen and (max-width: 500px) {
+    .outreachActivities {margin-top: 120px;}
+    .outreachActivitiesBoxesInfo {padding: 15px;}
+    .outreachActivitiesBoxesInfo h1 {font-size: 15px;} .outreachActivitiesBoxesInfo p {font-size: 12px;}
+}
 
-/***** SCREEN FRIENDLY *****/
-@media (max-width: 1300px) {.hero h1 {font-size: 95px;} .designAwardContent {width: 1000px;}}
-@media (max-width: 1150px) {.hero h1 {font-size: 90px;} .outreachActivitiesWords {width: 45%; margin-left: 10px;} .outreachActivitiesBoxes {width: 45%; margin-left: -70px;}}
-@media (max-width: 1000px) {.hero h1 {font-size: 70px;} .awardsContentImg {height: 300px;} .awardsContentTx {font-size: 15px;}
-    .outreachActivitiesWords {width: 35%; margin-left: 80px;} .outreachActivitiesBoxes {width: 60%; margin-left: -80px;}
-    .outreachActivitiesWords h1 {font-size: 50px;} .outreachActivitiesWords p {font-size: 20px;}
-    .outreachActivitiesBoxesInfo {width: 95%; height: 240px;} .outreachActivitiesBoxesInfo h1 {font-size: 20px;} .outreachActivitiesBoxesInfo p {font-size: 12px;}
-    .designAwardContent {width: 750px; height: 400px;}
-    .champs, .inspire, .mentorship, .workshops {margin-top: 20px;}
+@media screen and (max-width: 400px) {
+    .outreachActivitiesBoxes {grid-template-columns: 85%;}
+    .outreachActivitiesBoxesInfo h1 {font-size: 18px;} .outreachActivitiesBoxesInfo p {font-size: 15px;}
 }
-@media (max-width: 800px) {.hero h1 {font-size: 55px; top: 300px;} .outreachActivitiesWords {width: 30%; margin-left: 40px;} .outreachActivitiesBoxes {width: 70%; margin-left: -120px;} .outreachActivitiesBoxesInfo {width: 95%;}
-    .outreachActivitiesWords h1 {font-size: 40px;} .outreachActivitiesWords p {font-size: 15px;}
-    .outreachActivitiesBoxesInfo h1 {font-size: 17px;} .outreachActivitiesBoxesInfo p {font-size: 10px;}
+
+.outreachSignUps {width: 100%; height: 500px;}
+.outreachSignUpsImg {margin-top: 100px; width: 100%; height: 100%; background-position: center; background-size: cover;}
+.signUpBtn {border: 3px solid white; padding: 10px 30px; color: white; font-weight: 400; position: absolute; margin-left: 50px; margin-top: 380px; font-size: 12px; transition: 0.3s; border-radius: 15px;}
+.signUpBtn:hover {scale: 0.98}
+
+@media screen and (max-width: 800px) {
+    .outreachSignUps {height: 300px;}
+    .outreachSignUpsImg {height: 300px; display: flex; justify-content: center; align-items: center;} .signUpBtn {margin-top: 120px; margin-left: 0;}
 }
+
+.seasonDecode {display: flex; align-items: center; justify-content: center; width: 100%; height: auto; margin-top: 50px; padding: 50px 0;}
+.seasonDecode h1 {margin: auto; color: white; font-size: 60px; font-family: "Trend Slab W00 Five";} .seasonDecode p {color: rgba(255, 255, 255, 0.82); font-size: 20px;}

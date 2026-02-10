@@ -37,7 +37,7 @@
 
 /*CAPTAINS*/
 .captains, .engineers, .programmers, .socialMedia, .portfolios {width: 100%;}
-.rolesTitle, .rolesTx, .rolesTx1 { color: rgba(255, 255, 255, 0.82); text-align: center} .rolesTitle {text-align: start} .rolesTitle h1 {margin-top: -5px; font-size: 40px;}
+.rolesTx, .rolesTx1 {color: rgba(255, 255, 255, 0.82); text-align: center} .rolesTitle {color: white;} .rolesTitle h1 {margin-top: -5px; font-size: 40px;} .rolesTitle p {color: rgba(255, 255, 255, 0.82)}
 .rolesTx {margin-top: 10px;} .rolesTx1 {font-size: 14px;} .rolesTx2 {color: white; font-size: 20px; margin-top: -5px;}
 
 .captains {display: flex; flex-direction: column; align-items: center;}
@@ -80,14 +80,13 @@
     .outreach1, .outreach2, .outreach3 {text-align: center; width: 150px; height: 200px;}
     .media1, .media2, .media3 {width: 150px; height: 250px;} .media1, .media3 {margin-right: -180px;} .media2 { margin-left: -180px;} .media3 {margin-top: -70px;}
     .port1, .port2, .port3 {width: 150px; height: 250px;} .port1, .port3 {margin-left: -180px;} .port2 {margin-right: -180px;} .port3 {margin-top: -70px;}
-
 }
 
 @media screen and (max-width: 600px) {
     .aboutReapers {font-size: 14px;}
     .engineers, .programmers, .socialMedia, .portfolios {margin-top: 120px;}
     .rolesTx, #captain1, #captain2 {margin: 0;} #rolesTitleEngineers {position: absolute; left: 18%;}
-    #rolesTitleCaptains {margin: 0;} .captainOne, .captainTwo {width: 80%; margin: 0;} .captainTwo {margin-top: 80px;}
+    #rolesTitleCaptains {margin: 0; text-align: center} .captainOne, .captainTwo {width: 80%; margin: 0;} .captainTwo {margin-top: 80px;}
     .engineerTwo {margin-top: 0;} .engineerThree {margin-top: 0;} .engineerOne, .engineerTwo, .engineerThree {width: 150px; height: 250px; margin-top: 100px; margin-left: 10px; margin-right: 10px;}
     .programmerOne, .programmerTwo, .programmerThree {width: 80%; margin: 0; margin-top: 10px;} .programmerTwo, .programmerThree {margin-top: 80px;}
     .outreach1, .outreach2, .outreach3 {margin: 0 5px; width: 150px; height: 150px;}

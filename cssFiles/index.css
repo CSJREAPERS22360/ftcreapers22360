@@ -7,17 +7,17 @@
     position: relative; /* IMPORTANT */
 }
 
-.hero h1 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
+/*.hero h1 {*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    text-align: center;*/
 
-    font-size: 150px;
-    letter-spacing: 20px;
-    font-family: "Trend Slab W00 Five";
-}
+/*    font-size: 150px;*/
+/*    letter-spacing: 20px;*/
+/*    font-family: "Trend Slab W00 Five";*/
+/*}*/
 
 /****** WHO WE ARE ******/
 .whoWeAre {
@@ -27,19 +27,12 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(77, 4, 4, 1) 91%, rgba(92, 2, 2, 1) 100%);
 }
 
-.whoWeAre h2 {
-    width: 50%;                 /* starting width */
+.whoWeAre h1 {
+    width: 80%;                 /* starting width */
     margin: auto;
     text-align: center;
     color: rgba(255, 255, 255, 0.82);
     font-weight: 300;
-
-    opacity: 0;                 /* starting opacity */
-    transform: translateY(20px);
-    transition:
-            width 0.2s linear,
-            opacity 0.2s linear,
-            transform 0.2s linear;
 }
 
 /****** IMAGE SLIDER ******/
@@ -101,7 +94,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(77, 4, 4, 1) 100%);
 }
 
@@ -118,7 +111,7 @@
 
 .ourMissionLeftBtn {
     margin-top: 50px;
-    width: 200px;
+    width: 250px;
     padding: 10px 0;
     text-align: center;
     background: none;
@@ -286,6 +279,7 @@
 }
 
 @media screen and (max-width: 700px) {
+    .whoWeAre h1 {font-size: 25px;}
     .ourMission, .ourRobot {flex-direction: column; align-items: center; height: 700px; padding-top: 100px;} .ourMissionRight {width: 100%; position: absolute; margin-top: -350px; padding: 0;} .ourMissionLeft {width: 90%; margin-top: 280px; align-items: center; margin-right: 0; padding: 0;} .ourMissionLeftTx {font-size: 20px; text-align: center}
     .ourMissionRightBox1, .ourMissionRightBox2, .ourMissionRightBox3 {width: 70%; height: 300px;}
 
@@ -296,6 +290,7 @@
 }
 
 @media screen and (max-width: 500px) {
+    .whoWeAre h1 {font-size: 22px;}
     .ourMissionRight {width: 98%; margin-top: -500px; margin-left: -50px;} .ourMissionLeft {margin-top: 150px;} .ourRobotRight {margin-top: 50px;}
     .ourMissionRightBox1, .ourMissionRightBox2, .ourMissionRightBox3, .ourRobotLeftBox1, .ourRobotLeftBox2, .ourRobotLeftBox3 {height: 250px;}
 
@@ -304,7 +299,7 @@
 }
 
 @media screen and (max-width: 400px) {
-    .whoWeAre h2 {font-size: 20px;}
+    .whoWeAre h1 {font-size: 20px;}
     .ourMission {height: 620px;} .ourRobot {height: 600px;}
     .ourMissionRightBox1, .ourMissionRightBox2, .ourRobotLeftBox1, .ourRobotLeftBox2 {display: none;}
     .ourMissionRightBox3, .ourRobotLeftBox3 {width: 95%; height: 200px;} .ourMissionRight {margin-top: -500px;} .ourMissionLeft {margin-top: 100px;}
