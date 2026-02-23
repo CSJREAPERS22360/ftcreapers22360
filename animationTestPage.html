@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>True Frozen Horizontal Scroll</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: #fff;
+            font-family: system-ui, sans-serif;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .normal {
+            background: #222;
+        }
+
+        .horizontal-section {
+            position: relative;
+            background: #333;
+            overflow: hidden;
+        }
+
+        .horizontal-track {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            gap: 4vw;
+            padding: 0 5vw;
+            will-change: transform;
+        }
+
+        .card {
+            min-width: 60vw;
+            height: 60vh;
+            background: #555;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<section class="normal">Top Section</section>
+
+<section class="horizontal-section" id="horizontal-section">
+    <div class="horizontal-track" id="horizontal-track">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+    </div>
+</section>
+
+<section class="normal">Bottom Section</section>
+
+<script>
+    const section = document.getElementById("horizontal-section");
+    const track = document.getElementById("horizontal-track");
+    let sectionTop = 0;
+    let sectionBottom = 0;
+
+    let inHorizontal = false;
+    let lockedScrollY = 0;
+    let progress = 0; // 0 → 1
+    const speed = 0.0007; // scroll sensitivity
+    const overshoot = 1.2; // move a bit further at the end
+
+    function updateSectionBounds() {
+        const rect = section.getBoundingClientRect();
+        sectionTop = window.scrollY + rect.top;
+        sectionBottom = sectionTop + rect.height;
+    }
+
+    function updateTrackTransform() {
+        const maxX = track.scrollWidth - window.innerWidth;
+        const distance = maxX * overshoot;
+        track.style.transform = `translateX(${-progress * distance}px)`;
+    }
+
+    function enterHorizontal(lockAt) {
+        inHorizontal = true;
+        lockedScrollY = lockAt;
+        window.scrollTo(0, lockedScrollY);
+        updateTrackTransform();
+    }
+
+    function onWheel(e) {
+        updateSectionBounds();
+
+        const y = window.scrollY;
+        const goingDown = e.deltaY > 0 ? 1 : -1;
+
+        // If not in horizontal yet, check if we should enter
+        if (!inHorizontal) {
+            const enteringFromTop = goingDown === 1 && y + e.deltaY >= sectionTop && y < sectionBottom;
+            const enteringFromBottom = goingDown === -1 && y + e.deltaY <= sectionBottom - window.innerHeight && y > sectionTop - window.innerHeight;
+
+            if (enteringFromTop || enteringFromBottom) {
+                e.preventDefault();
+                enterHorizontal(goingDown === 1 ? sectionTop : sectionBottom - window.innerHeight);
+                return;
+            }
+            return; // normal scroll
+        }
+
+        // If we are in horizontal mode, lock scroll and move cards instead
+        e.preventDefault();
+        window.scrollTo(0, lockedScrollY);
+
+        progress += e.deltaY * speed;
+        progress = Math.max(0, Math.min(1, progress));
+        updateTrackTransform();
+    }
+
+    window.addEventListener("resize", updateSectionBounds);
+    window.addEventListener("load", () => {
+        updateSectionBounds();
+        updateTrackTransform();
+    });
+
+    // IMPORTANT: passive: false so we can preventDefault on wheel
+    window.addEventListener("wheel", onWheel, { passive: false });
+</script>
+
+</body>
+</html>

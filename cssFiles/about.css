@@ -26,11 +26,11 @@
 }
 
 /*IMG*/
-.captainOneImg, .captainTwoImg,.engineerOneImg, .engineerTwoImg, .engineerThreeImg, .programmerOneImg, .programmerTwoImg, .programmerThreeImg, .outreachOneImg, .outreachTwoImg, .outreachThreeImg, .mediaOneImg, .mediaTwoImg, .mediaThreeImg, .portOneImg, .portTwoImg, .portThreeImg
+.captainOneImg, .captainTwoImg,.engineerOneImg, .engineerTwoImg, .engineerThreeImg, .programmerOneImg, .programmerTwoImg, .programmerThreeImg, .outreachOneImg, .outreachTwoImg, .outreachThreeImg, .mediaOneImg, .mediaTwoImg, .mediaThreeImg, .portOneImg, .portTwoImg, .portThreeImg, .mentorOneImg
 {width: 100%; height: 100%; background-position: center; background-size: cover;}
 
 /*CAPTAINS*/
-.captains, .engineers, .programmers, .socialMedia, .portfolios {width: 100%;}
+.captains, .engineers, .programmers, .socialMedia, .portfolios, .mentors {width: 100%;}
 .rolesTx, .rolesTx1 {color: rgba(255, 255, 255, 0.82); text-align: center} .rolesTitle {color: white;} .rolesTitle h1 {margin-top: -5px; font-size: 40px;} .rolesTitle p {color: rgba(255, 255, 255, 0.82)}
 .rolesTx {margin-top: 10px;} .rolesTx1 {font-size: 14px;} .rolesTx2 {color: white; font-size: 20px; margin-top: -5px;}
 
@@ -63,8 +63,12 @@
 
 /*PORTFOLIO*/
 .portfolios {display: flex; flex-direction: column; align-items: center; margin-top: 150px;}
-.port1, .port2, .port3 {width: 200px; height: 300px; text-align: center; margin-top: 30px;}
+.port1, .port2, .port3, .port4 {width: 200px; height: 300px; text-align: center; margin-top: 30px;}
 .port1, .port3 {margin-left: -230px;} .port2 {margin-right: -240px; margin-top: -100px;} .port3 {margin-top: -100px;}
+.port4 {margin-right: -240px; margin-top: -100px;}
+
+.mentors {display: flex; flex-direction: column; align-items: center; margin-top: 150px;}
+.mentor1 {width: 200px; height: 300px; text-align: center; margin-top: 30px;}
 
 
 @media screen and (max-width: 900px) {
@@ -73,7 +77,7 @@
     .programmerOne, .programmerTwo, .programmerThree {width: 400px; height: 250px;}
     .outreach1, .outreach2, .outreach3 {text-align: center; width: 150px; height: 200px;}
     .media1, .media2, .media3 {width: 150px; height: 250px;} .media1, .media3 {margin-right: -180px;} .media2 { margin-left: -180px;} .media3 {margin-top: -70px;}
-    .port1, .port2, .port3 {width: 150px; height: 250px;} .port1, .port3 {margin-left: -180px;} .port2 {margin-right: -180px;} .port3 {margin-top: -70px;}
+    .port1, .port2, .port3, .port4 {width: 150px; height: 250px;} .port1, .port3 {margin-left: -180px;} .port2, .port4 {margin-right: -180px;} .port3 {margin-top: -70px;}
 }
 
 @media screen and (max-width: 600px) {

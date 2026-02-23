@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,18 +9,19 @@
     <link rel="stylesheet" href="cssFiles/everyCSS/header&footer.css">
     <script src="https://kit.fontawesome.com/cb86199370.js" crossorigin="anonymous"></script>
 
-    <link rel="icon" type="svg" href="imageFiles/icons/ReapersIcon.svg">
+    <link rel="icon" type="svg" href="mediaFiles/icons/ReapersIcon.svg">
     <!-- FONTS -->
     <link href="https://db.onlinewebfonts.com/c/764b83f2c36eaf340de6654359fc319f?family=Trend+Slab+W00+Five" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+
+    <header class="header" id="indexHeader">
         <ul>
             <a href="index.html"><li id="on">home</li></a>
             <a href="about.html"><li>about</li></a>
             <a href="highlights.html"><li>highlights</li></a>
-            <a href="shop.html"><li>shop</li></a>
-            <a href="sponsors.html"><li>sponsors</li></a>
+<!--            <a href="shop.html"><li>shop</li></a>-->
+<!--            <a href="sponsors.html"><li>sponsors</li></a>-->
             <a href="contact.html"><li>contact</li></a>
         </ul>
         <a class="logo" href="index.html"></a>
@@ -41,70 +42,124 @@
             <li><a href="index.html">home</a></li>
             <li><a href="about.html">about</a></li>
             <li><a href="highlights.html">highlights</a></li>
-            <li><a href="shop.html">shop</a></li>
-            <li><a href="sponsors.html">sponsors</a></li>
+<!--            <li><a href="shop.html">shop</a></li>-->
+<!--            <li><a href="sponsors.html">sponsors</a></li>-->
             <li><a href="contact.html">contact</a></li>
         </ul>
     </nav>
 
-    <section class="hero">
-        <h1>Reapers</h1>
-    </section>
+    <div id="smooth-wrapper"> <div id="smooth-content">
 
-    <section class="whoWeAre">
-        <h1>The Reapers is a student-led robotics team participating in the FIRST Tech Challenge (FTC). The team is based at Forest Hills High School and consists of 18 members, primarily juniors and seniors. Team members collaborate across multiple functional areas, including robot design and engineering, software development, and community outreach, with responsibilities shared among all participants.</h1>
-    </section>
+        <section class="videoHeroContainer">
+            <video class="videoHero" src="mediaFiles/video/REAPERS%20WEBSITE%20BUMPER.mp4" autoplay loop muted style="object-fit: cover;"></video>
+            <h1>Reapers</h1>
+        </section>
 
-    <section class="imageSlider">
-        <div class="sliderContainer">
-            <div class="slide"><img src="imageFiles/DECODE/DECODE_4.JPG" alt=""></div>
-            <div class="slide"><img src="imageFiles/INTO_THE_DEEP/INTO_THE_DEEP_4.JPG" alt=""></div>
-            <div class="slide"><img src="imageFiles/DECODE/DECODE_3.JPG" alt=""></div>
-        </div>
+        <section class="whoWeAre">
+            <h1>The Reapers is a student-led robotics team participating in the FIRST Tech Challenge (FTC). The team is based at Forest Hills High School and consists of 18 members, primarily juniors and seniors. Team members collaborate across multiple functional areas, including robot design and engineering, software development, and community outreach, with responsibilities shared among all participants.</h1>
+        </section>
 
-        <button class="arrow left">&#10094;</button>
-        <button class="arrow right">&#10095;</button>
-    </section>
+    <!--    <section class="imageSlider">-->
+    <!--        <div class="sliderContainer">-->
+    <!--            <div class="slide"><img src="mediaFiles/DECODE/DECODE_4.JPG" alt=""></div>-->
+    <!--            <div class="slide"><img src="mediaFiles/INTO_THE_DEEP/INTO_THE_DEEP_4.JPG" alt=""></div>-->
+    <!--            <div class="slide"><img src="mediaFiles/DECODE/DECODE_3.JPG" alt=""></div>-->
+    <!--        </div>-->
 
-    <section class="ourMission">
-        <div class="ourMissionLeft">
-            <div class="ourMissionLeftTx">Our mission is to advance the values of FIRST by expanding access to STEM education, particularly for underrepresented students. We use robotics as a platform to develop technical skills, collaboration, and innovation.</div>
-            <a href="about.html" class="ourMissionLeftBtn">LEARN MORE</a>
-        </div>
-        <div class="ourMissionRight">
-            <div class="ourMissionRightBox1"></div>
-            <div class="ourMissionRightBox2"></div>
-            <div class="ourMissionRightBox3"></div>
-        </div>
-    </section>
+    <!--        <button class="arrow left">&#10094;</button>-->
+    <!--        <button class="arrow right">&#10095;</button>-->
+    <!--    </section>-->
 
-    <section class="ourRobot">
-        <div class="ourRobotLeft">
-            <div class="ourRobotLeftBox1"></div>
-            <div class="ourRobotLeftBox2"></div>
-            <div class="ourRobotLeftBox3"></div>
-        </div>
-        <div class="ourRobotRight">
-            <p class="ourRobotRightTitle">[PROTOTYPE ROBOT]</p>
-            <p class="ourRobotRightDes">Very simple design that is meant to be robust in order to be  adapted to  future robot versions</p>
+        <section class="horizontal-section" id="horizontal-section">
+            <div class="horizontal-track" id="horizontal-track">
+                <div class="card" style="background-image: url('mediaFiles/HOME_CARD/card1.JPG'); background-position: center; background-size: cover;"></div>
+                <div class="card" style="background-image: url('mediaFiles/HOME_CARD/card2.JPG'); background-position: center; background-size: cover;"></div>
+                <div class="card" style="background-image: url('mediaFiles/HOME_CARD/card3.JPG'); background-position: center; background-size: cover;"></div>
+                <div class="card" style="background-image: url('mediaFiles/HOME_CARD/card4.JPG'); background-position: center; background-size: cover;"></div>
+            </div>
+        </section>
 
-            <ul>
-                <P>USED IN: </P>
-                <li>NYC QUALIFIERS 4</li>
-                <li>NYC QUALIFIERS 6</li>
-            </ul>
-        </div>
-    </section>
+        <section class="ourMission">
+            <div class="ourMissionLeft">
+                <div class="ourMissionLeftTx">Our mission is to advance the values of FIRST by expanding access to STEM education, particularly for underrepresented students. We use robotics as a platform to develop technical skills, collaboration, and innovation.</div>
+                <a href="about.html" class="ourMissionLeftBtn">LEARN MORE</a>
+            </div>
+            <div class="ourMissionRight">
+                <div class="ourMissionRightBox1"></div>
+                <div class="ourMissionRightBox2"></div>
+                <div class="ourMissionRightBox3"></div>
+            </div>
+        </section>
 
-    <section class="whereWeOn">
-        <div class="whereWeOnTitle"></div>
-        <div class="whereWeOnTitle2"> <h1>Upcoming events</h1></div>
-    </section>
+        <section class="ourRobot">
+            <div class="ourRobotLeft">
+                <div class="ourRobotLeftBox1"></div>
+                <div class="ourRobotLeftBox2"></div>
+                <div class="ourRobotLeftBox3"></div>
+            </div>
+            <div class="ourRobotRight">
+                <p class="ourRobotRightTitle">[PROTOTYPE ROBOT]</p>
+                <p class="ourRobotRightDes">Very simple design that is meant to be robust in order to be  adapted to  future robot versions</p>
 
-    <section class="news"></section>
+                <ul>
+                    <P>USED IN: </P>
+                    <li>NYC QUALIFIERS 4</li>
+                    <li>NYC QUALIFIERS 6</li>
+                </ul>
+            </div>
+        </section>
 
+        <section class="whereWeOn">
+            <div class="whereWeOnTitle"></div>
+            <div class="whereWeOnTitle2"> <h1>Upcoming events</h1></div>
+        </section>
 
+        <section class="news"></section>
+
+</div></div>
 </body>
     <script src="javaScriptFiles/indexPageJavaScript/imageSlider.js"></script>
     <script src="javaScriptFiles/everyPageJavaScript/header&footer.js"></script>
+    <script src="javaScriptFiles/everyPageJavaScript/animations.js"></script>
+    <script>
+        const section = document.getElementById("horizontal-section");
+        const track = document.getElementById("horizontal-track");
+
+        function updateHorizontalScroll() {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const windowHeight = window.innerHeight;
+            const scrollY = window.scrollY;
+
+            // progress from 0 → 1
+            let progress = (scrollY - sectionTop - 100) / (sectionHeight - windowHeight);
+            progress = Math.max(0, Math.min(progress, 1));
+
+            // Total horizontal distance
+            const maxX = track.scrollWidth + 800 - window.innerWidth;
+
+            // ⭐ Slow down the card movement
+            const slowProgress = progress * 0.1;
+
+            track.style.transform = `translateX(${-slowProgress * maxX * 5.5}px)`;
+        }
+
+        window.addEventListener("scroll", updateHorizontalScroll);
+        window.addEventListener("resize", updateHorizontalScroll);
+        window.addEventListener("load", updateHorizontalScroll);
+    </script>
+    <script>
+        const headerEl = document.querySelector("#indexHeader");
+
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+            const heroHeight = window.innerHeight;
+
+            if (scrollY > heroHeight) {
+                headerEl.classList.add("transparent");
+            } else {
+                headerEl.classList.remove("transparent");
+            }
+        });
+    </script>
 </html>

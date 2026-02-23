@@ -2,7 +2,6 @@ html {background: black;}
 .hero {
     width: 100%;
     height: 400px;
-    background: yellow;
 }
 
 .awards {width: 100%; height: auto; background: black; margin-top: 50px; display: flex; flex-direction: column; align-items: center; padding-bottom: 200px;}
